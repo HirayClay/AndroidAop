@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        tools:text="torvalds" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_toRightOf="@+id/author"
+        tools:text="Linux" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/repo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/author"
+        android:textColor="@android:color/holo_orange_light"
+        tools:text="https://github.com/torvalds/linux" />
+
+</RelativeLayout>
