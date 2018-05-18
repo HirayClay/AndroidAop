@@ -26,7 +26,7 @@ public class MyLinearLayout extends LinearLayout {
     super(context, attrs, defStyle);
   }
 
-  @AspectLog
+  @AspectLog("MyLinearLayoutLogger")
   @Override
   protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
     super.onMeasure(widthMeasureSpec, heightMeasureSpec);

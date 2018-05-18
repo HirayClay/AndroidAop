@@ -2,7 +2,7 @@ package com.hiray.mvvm.androidaop.network;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -23,9 +23,10 @@ public class RestApiHelper {
             OkHttpClient okHttpClient = new OkHttpClient();
 
             Retrofit retrofit = new Retrofit.Builder()
+                    .client(okHttpClient)
                     .baseUrl("http://www.gank.io/")
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             restApi = retrofit.create(RestApi.class);
         }

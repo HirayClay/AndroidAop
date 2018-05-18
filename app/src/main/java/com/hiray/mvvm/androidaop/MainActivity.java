@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         contentLayoutRoot = findViewById(R.id.content_layout_root);
     }
 
-    @AspectLog
+    @AspectLog("MainLogger")
     public void addWidget(View view) {
         TextView textView = new TextView(this);
         textView.setAllCaps(false);
@@ -35,6 +35,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void aopPermission(View view) {
-
+        startActivity(new Intent(this, AopPermissionActivity.class));
     }
 }

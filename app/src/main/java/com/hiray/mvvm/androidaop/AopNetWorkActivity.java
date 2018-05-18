@@ -80,7 +80,7 @@ public class AopNetWorkActivity extends AppCompatActivity {
         protected void convert(BaseViewHolder helper, AndroidItemModel item) {
             helper.setText(R.id.author, item.author)
                     .setText(R.id.repo, item.repo)
-                    .setText(R.id.project_name, item.desc);
+                    .setText(R.id.project_desc, item.desc);
         }
     }
 }

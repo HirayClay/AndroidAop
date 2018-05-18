@@ -13,7 +13,7 @@
         tools:text="torvalds" />
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/project_name"
+        android:id="@+id/project_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -25,7 +25,7 @@
         android:id="@+id/repo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/author"
+        android:layout_below="@+id/project_desc"
         android:textColor="@android:color/holo_orange_light"
         tools:text="https://github.com/torvalds/linux" />
 

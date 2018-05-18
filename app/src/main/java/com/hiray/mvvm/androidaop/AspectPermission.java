@@ -6,13 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by hiray on 2018/5/16.
+ * Created by hiray on 2018/5/17.
  *
  * @author hiray
  */
 @Retention(RetentionPolicy.CLASS)
-@Target({ElementType.METHOD, ElementType.CONSTRUCTOR})
-public @interface AspectLog {
+@Target({ElementType.METHOD})
+public @interface AspectPermission {
 
-    String value() default "";
+    String value();
 }

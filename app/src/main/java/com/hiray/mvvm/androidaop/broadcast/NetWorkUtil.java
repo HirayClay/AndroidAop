@@ -1,12 +1,11 @@
 package com.hiray.mvvm.androidaop.broadcast;
 
-import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
+import android.util.Log;
 
 /**
  * Created by hiray on 2018/5/16.
@@ -35,6 +34,7 @@ public class NetWorkUtil extends BroadcastReceiver {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         isConnected = activeNetworkInfo != null && activeNetworkInfo.isConnectedOrConnecting();
+        Log.i(TAG, "initNetWorkState: "+isConnected);
     }
 
     /**
@@ -49,35 +49,17 @@ public class NetWorkUtil extends BroadcastReceiver {
 
     /**
      * 接收网络状态改变广播
-     *
-     * @param context
-     * @param intent
      */
     @Override
     public void onReceive(Context context, Intent intent) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo mobile = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         NetworkInfo wifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+//        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        isConnected = mobile.isConnected() || wifi.isConnected();
 
-        boolean changed;
-        boolean curStat = mobile.isConnected() || wifi.isConnected() || (networkInfo != null && networkInfo.isConnectedOrConnecting());
-        changed = (curStat != isConnected);
-        if (curStat) {
-            isConnected = true;
-        } else {
-            isConnected = false;
-        }
-
-        castIfChanged(changed);
     }
 
-    private void castIfChanged(boolean changed) {
-        if (!changed)return;
-        if (Build.VERSION.SDK_INT< Build.VERSION_CODES.LOLLIPOP){//5.0以下
-            ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        }
-    }
 
     public static boolean isConnected() {
         return isConnected;

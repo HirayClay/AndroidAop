@@ -26,7 +26,8 @@ public class AopLog {
     @Around("methodWithLog()")
     public Object process(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
-        Log.i("AspectLog", signature.getName() + "=============");
+        AspectLog annotation = signature.getMethod().getAnnotation(AspectLog.class);
+        Log.i("AspectLog", signature.getName() + "============="+annotation.value());
         return joinPoint.proceed();
     }
 }

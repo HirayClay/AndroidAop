@@ -14,7 +14,7 @@ buildscript {
     }
 }
 allprojects {
-    repositories{
+    repositories {
         maven { url "https://jitpack.io" }
     }
 }
@@ -38,9 +38,9 @@ project.android.applicationVariants.all { variant ->
     }
 
     JavaCompile javaCompile = variant.javaCompile
-    javaCompile.doLast {
+    javaCompile.doLast("WeavingTask", {
         String[] args = ["-showWeaveInfo",
-                         "-1.5",
+                         "-1.7",
                          "-inpath", javaCompile.destinationDir.toString(),
                          "-aspectpath", javaCompile.classpath.asPath,
                          "-d", javaCompile.destinationDir.toString(),
@@ -68,7 +68,7 @@ project.android.applicationVariants.all { variant ->
                     break;
             }
         }
-    }
+    })
 }
 
 dependencies {
@@ -80,7 +80,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //在dependencies中添加该依赖，提供@Aspect语法
     implementation 'org.aspectj:aspectjrt:1.8.9'
-    //    implementation project(path: ':aspectj')
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
@@ -88,5 +87,5 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     implementation 'io.reactivex.rxjava2:rxjava:2.0.2'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 }
