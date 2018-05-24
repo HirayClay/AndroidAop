@@ -31,6 +31,7 @@ android {
 }
 
 final def log = project.logger
+final def logFile = file("./log/log")
 project.android.applicationVariants.all { variant ->
     if (!variant.buildType.isDebuggable()) {
         log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
