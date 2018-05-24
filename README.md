@@ -8,4 +8,4 @@ aop 小栗子
 是不是显得很啰嗦，那么有没有一种办法可以省去每个地方都判断网络连接，其实那就
 要用到Aop编程，可以把横跨每个模块的功能统一进行处理。这里我用到了AspectJ
 工具，相关的资料可以自己搜索。这里推一篇老外的[文章](https://fernandocejas.com/2014/08/03/aspect-oriented-programming-in-android/)，之前只了解过Aop，但是并
-没有在Android上继承进来，貌似也很麻烦，另外JakeWharton的[Hugo](https://github.com/JakeWharton/hugo)库也是基于此。
+没有在Android上集成进来，貌似也很麻烦，另外JakeWharton的[Hugo](https://github.com/JakeWharton/hugo)库也是基于此。

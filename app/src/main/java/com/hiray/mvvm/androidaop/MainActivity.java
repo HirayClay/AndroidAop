@@ -8,8 +8,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
     LinearLayout contentLayoutRoot;
 
     @Override
@@ -19,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         contentLayoutRoot = findViewById(R.id.content_layout_root);
     }
 
-    @AspectLog("MainLogger")
+    @AspectSingleClick
+    @AspectLog
     public void addWidget(View view) {
         TextView textView = new TextView(this);
         textView.setAllCaps(false);

@@ -43,9 +43,11 @@ public class AopNetWorkActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<ResponseWrapper<List<AndroidItemModel>>>() {
+                    Disposable disposable;
+
                     @Override
                     public void onSubscribe(Disposable d) {
-
+                        disposable = d;
                     }
 
                     @Override
@@ -53,6 +55,7 @@ public class AopNetWorkActivity extends AppCompatActivity {
                         if (listResponseWrapper.isOk()) {
                             recyclerView.setAdapter(adapter = new QuickAdapter(R.layout.android_item, listResponseWrapper.data));
                         }
+                        disposable.dispose();
                     }
 
                     @Override

@@ -43,18 +43,13 @@ public class AopPermission {
         String permission = perAnnotation.value();
         int granted = ContextCompat.checkSelfPermission(context, permission);
         if (granted != PackageManager.PERMISSION_GRANTED) {
-            Log.i(TAG, "intercept: AAAAAAAAAAAAAA");
             if (ActivityCompat.shouldShowRequestPermissionRationale(context, permission)) {
-                Log.i(TAG, "intercept: BBBBBBBBBBBBBBBB");
-
                 AlertDialog alertDialog = new AlertDialog.Builder(context)
                         .setTitle("权限申请")
                         .setMessage("需要拍照，权限爱给不给，自己去设置里面开启")
                         .create();
                 alertDialog.show();
             } else {
-                Log.i(TAG, "intercept: CCCCCCCCCCCCCC");
-
                 PermissionRequestActivity.requestPermissions(context, new String[]{permission}, 1234, new PermissionCallBack() {
 
                     @Override
