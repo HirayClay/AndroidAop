@@ -41,6 +41,7 @@ project.android.applicationVariants.all { variant ->
     javaCompile.doLast("WeavingTask", {
         String[] args = ["-showWeaveInfo",
                          "-1.7",
+                         "-log", logFile.getAbsolutePath(),
                          "-inpath", javaCompile.destinationDir.toString(),
                          "-aspectpath", javaCompile.classpath.asPath,
                          "-d", javaCompile.destinationDir.toString(),
