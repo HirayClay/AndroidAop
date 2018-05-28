@@ -1,11 +1,14 @@
 package com.hiray.mvvm.androidaop;
 
+import android.app.Activity;
+import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.hiray.mvvm.androidaop.broadcast.NetWorkUtil;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -28,12 +31,18 @@ public class AopNetWork {
     @Around("networkMethod()")
     public Object intercept(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
-        Log.i(TAG, "intercept: ==="+signature.getName());
+        Log.i(TAG, "intercept: ===" + signature.getName());
         Object r = null;
         if (NetWorkUtil.isConnected()) {
             r = joinPoint.proceed();
             Log.i(TAG, "intercept: ---网络请求发出");
-        } else Log.i(TAG, "intercept: 网络未连接");
+        } else {
+            Object ev = joinPoint.getThis();
+            if (ev instanceof Activity)
+                Toast.makeText((Context) ev, "网络未连接", Toast.LENGTH_SHORT).show();
+            else if (ev instanceof Fragment)
+                Toast.makeText(((Fragment) ev).getActivity(), "网络未连接", Toast.LENGTH_SHORT).show();
+        }
 
         return r;
     }

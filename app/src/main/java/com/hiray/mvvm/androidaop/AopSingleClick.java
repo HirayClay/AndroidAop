@@ -31,6 +31,7 @@ public class AopSingleClick {
         if (currTime - lastClickTime > 750) {
             try {
                 Log.i(TAG, "singleClick: 点击成功！");
+                lastClickTime = currTime;
                 return joinPoint.proceed();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();

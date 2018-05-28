@@ -1,0 +1,33 @@
+Thu May 24 10:21:34 CST 2018
+Join point 'method-execution(void com.hiray.mvvm.androidaop.AopNetWorkActivity.getUpdatedAndroidNews(android.view.View))' in Type 'com.hiray.mvvm.androidaop.AopNetWorkActivity' (AopNetWorkActivity.java:42) advised by around advice from 'com.hiray.mvvm.androidaop.AopNetWork' (AopNetWork.class(from AopNetWork.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MyLinearLayout.onMeasure(int, int))' in Type 'com.hiray.mvvm.androidaop.MyLinearLayout' (MyLinearLayout.java:32) advised by around advice from 'com.hiray.mvvm.androidaop.AopLog' (AopLog.class(from AopLog.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.AopPermissionActivity.takePhoto(android.view.View))' in Type 'com.hiray.mvvm.androidaop.AopPermissionActivity' (AopPermissionActivity.java:37) advised by around advice from 'com.hiray.mvvm.androidaop.AopPermission' (AopPermission.class(from AopPermission.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MainActivity.addWidget(android.view.View))' in Type 'com.hiray.mvvm.androidaop.MainActivity' (MainActivity.java:28) advised by around advice from 'com.hiray.mvvm.androidaop.AopSingleClick' (AopSingleClick.class(from AopSingleClick.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MainActivity.addWidget(android.view.View))' in Type 'com.hiray.mvvm.androidaop.MainActivity' (MainActivity.java:28) advised by around advice from 'com.hiray.mvvm.androidaop.AopLog' (AopLog.class(from AopLog.java))
+	
+Mon May 28 17:24:46 CST 2018
+Join point 'method-execution(void com.hiray.mvvm.androidaop.AopNetWorkActivity.getUpdatedAndroidNews(android.view.View))' in Type 'com.hiray.mvvm.androidaop.AopNetWorkActivity' (AopNetWorkActivity.java:42) advised by around advice from 'com.hiray.mvvm.androidaop.AopNetWork' (AopNetWork.class(from AopNetWork.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MyLinearLayout.onMeasure(int, int))' in Type 'com.hiray.mvvm.androidaop.MyLinearLayout' (MyLinearLayout.java:32) advised by around advice from 'com.hiray.mvvm.androidaop.AopLog' (AopLog.class(from AopLog.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.AopPermissionActivity.takePhoto(android.view.View))' in Type 'com.hiray.mvvm.androidaop.AopPermissionActivity' (AopPermissionActivity.java:37) advised by around advice from 'com.hiray.mvvm.androidaop.AopPermission' (AopPermission.class(from AopPermission.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MainActivity.addWidget(android.view.View))' in Type 'com.hiray.mvvm.androidaop.MainActivity' (MainActivity.java:28) advised by around advice from 'com.hiray.mvvm.androidaop.AopSingleClick' (AopSingleClick.class(from AopSingleClick.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MainActivity.addWidget(android.view.View))' in Type 'com.hiray.mvvm.androidaop.MainActivity' (MainActivity.java:28) advised by around advice from 'com.hiray.mvvm.androidaop.AopLog' (AopLog.class(from AopLog.java))
+	
+Mon May 28 17:35:20 CST 2018
+Join point 'method-execution(void com.hiray.mvvm.androidaop.AopNetWorkActivity.getUpdatedAndroidNews(android.view.View))' in Type 'com.hiray.mvvm.androidaop.AopNetWorkActivity' (AopNetWorkActivity.java:42) advised by around advice from 'com.hiray.mvvm.androidaop.AopNetWork' (AopNetWork.class(from AopNetWork.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MyLinearLayout.onMeasure(int, int))' in Type 'com.hiray.mvvm.androidaop.MyLinearLayout' (MyLinearLayout.java:32) advised by around advice from 'com.hiray.mvvm.androidaop.AopLog' (AopLog.class(from AopLog.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.AopPermissionActivity.takePhoto(android.view.View))' in Type 'com.hiray.mvvm.androidaop.AopPermissionActivity' (AopPermissionActivity.java:37) advised by around advice from 'com.hiray.mvvm.androidaop.AopPermission' (AopPermission.class(from AopPermission.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MainActivity.addWidget(android.view.View))' in Type 'com.hiray.mvvm.androidaop.MainActivity' (MainActivity.java:28) advised by around advice from 'com.hiray.mvvm.androidaop.AopSingleClick' (AopSingleClick.class(from AopSingleClick.java))
+	
+Join point 'method-execution(void com.hiray.mvvm.androidaop.MainActivity.addWidget(android.view.View))' in Type 'com.hiray.mvvm.androidaop.MainActivity' (MainActivity.java:28) advised by around advice from 'com.hiray.mvvm.androidaop.AopLog' (AopLog.class(from AopLog.java))
+	
